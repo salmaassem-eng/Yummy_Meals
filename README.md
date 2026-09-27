@@ -37,7 +37,7 @@ The app is built using Next.js and React, with SQLite used to manage meal data. 
 - app/ — pages and UI layout
 - components/ — reusable interface components
 - lib/ — data access and server actions
-- public/ — static assets and uploaded images
+- public/ — static assets and locally uploaded images (not cloud-backed)
 - initdb.js — initializes the SQLite database with sample meal records
 
 ## Prerequisites
@@ -88,7 +88,7 @@ http://localhost:3000
 - Browse the meals page to see all available dishes and recipes.
 - Open a meal detail page to view ingredients, instructions, and creator details.
 - Submit a new meal using the form in the meals section.
-- Uploaded images are saved and stored in the public images folder.
+- Uploaded images are saved to `public/images` on the local filesystem. They are not uploaded to cloud storage, so they may not persist or be available when the app is deployed or redeployed.
 
 ## Available Scripts
 
