@@ -127,5 +127,5 @@ Salma Assem
 
 ## License
 
-This project is intended for educational and personal use. Add a license if you plan to publish it publicly.
+This project is intended for educational and personal use.
 
