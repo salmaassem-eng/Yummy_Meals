@@ -23,34 +23,42 @@ export default function Home() {
     </div>
 
    </header>
-
-   <main>
-     <section className={classes.section}>
-          <h2>How it works</h2>
-          <p>
-            NextLevel Food is a platform for foodies to share their favorite
-            recipes with the world. It&apos;s a place to discover new dishes, and to
-            connect with other food lovers.
-          </p>
-          <p>
-            NextLevel Food is a place to discover new dishes, and to connect
-            with other food lovers.
-          </p>
-        </section>
-
-        <section className={classes.section}>
-          <h2>Why NextLevel Food?</h2>
-          <p>
-            NextLevel Food is a platform for foodies to share their favorite
-            recipes with the world. It&apos;s a place to discover new dishes, and to
-            connect with other food lovers.
-          </p>
-          <p>
-            NextLevel Food is a place to discover new dishes, and to connect
-            with other food lovers.
-          </p>
-        </section>
-   </main>
+ <main>
+      <section className="mx-auto w-[90%] max-w-2xl py-16 text-center first:pt-10">
+        <h2 className="font-serif text-3xl text-amber-400 sm:text-4xl">
+          How it works
+        </h2>
+        <div className="mx-auto mt-3 h-px w-16 bg-amber-400/60" />
+        <p className="mt-6 text-lg leading-relaxed text-stone-300 sm:text-xl">
+          NextLevel Food is a platform for foodies to share their favorite
+          recipes with the world. It&apos;s a place to discover new dishes, and to
+          connect with other food lovers.
+        </p>
+        <p className="mt-4 text-lg leading-relaxed text-stone-300 sm:text-xl">
+          NextLevel Food is a place to discover new dishes, and to connect
+          with other food lovers.
+        </p>
+      </section>
+ 
+      <div className="mx-auto h-px w-[90%] max-w-2xl bg-stone-800" />
+ 
+      <section className="mx-auto w-[90%] max-w-2xl py-16 text-center last:pb-10">
+        <h2 className="font-serif text-3xl text-amber-400 sm:text-4xl">
+          Why NextLevel Food?
+        </h2>
+        <div className="mx-auto mt-3 h-px w-16 bg-amber-400/60" />
+        <p className="mt-6 text-lg leading-relaxed text-stone-300 sm:text-xl">
+          NextLevel Food is a platform for foodies to share their favorite
+          recipes with the world. It&apos;s a place to discover new dishes, and to
+          connect with other food lovers.
+        </p>
+        <p className="mt-4 text-lg leading-relaxed text-stone-300 sm:text-xl">
+          NextLevel Food is a place to discover new dishes, and to connect
+          with other food lovers.
+        </p>
+      </section>
+    </main>
+    
    </>
   );
 }
