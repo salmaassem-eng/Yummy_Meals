@@ -2,16 +2,15 @@
 
 import classes from './page.module.css';
 import ImagePicker from '../../components/meals/image-picker';
-import { shareMeal } from '../../../lib/action';
+import { shareMeal } from './actions';
 import MealsFormSubmit from '../form_submit';
-import { useFormState } from 'react-dom';
-import { useEffect } from 'react';
+import { useActionState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ShareMealPage() {
 
- const [state, fromAction] = useFormState(shareMeal, {message :null});
+ const [state, formAction] = useActionState(shareMeal, { message: null });
 
  useEffect(() => {
   if (state.message) {
@@ -29,7 +28,7 @@ export default function ShareMealPage() {
         <p>Or any other meal you feel needs sharing!</p>
       </header>
       <main className={classes.main}>
-        <form className={classes.form} action={fromAction} >
+        <form className={classes.form} action={formAction} >
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
