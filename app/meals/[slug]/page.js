@@ -3,12 +3,27 @@ import Image from 'next/image';
 import { getMealBySlug } from '../../../lib/meals';
 import { notFound } from 'next/navigation';
 
+export async function generateMetadata ({params}){
+    const meal = await getMealBySlug(params.slug);
+
+    if(!meal) {
+      notFound();    
+    };
+
+    return{
+        title:meal.title,
+        decription:meal.summary
+    };
+}
+
 
 export default async function MealDetailPage({params}) {
    const meal = await getMealBySlug(params.slug);
-    if(!meal) {
-      notFound();    }
-   meal.instructions = meal.instructions.replace(/\n/g, '<br>'); // Replace newline characters with <br> tags
+  if(!meal) {
+      notFound();    
+    };
+   meal.instructions = meal.instructions.replace(/\n/g, '<br/>'); // Replace newline characters with <br> tags
+   
     return (
        <>
         <header className={classes.header}>
@@ -18,7 +33,7 @@ export default async function MealDetailPage({params}) {
              <div className={classes.headerText}>
                 <h1>{meal.title}</h1>
                 <p className={classes.creator}>
-                    by <a href={`mailto:${meal.creatorEmail}`}>{meal.creator}</a>
+                    by <a href={`mailto:${meal.creator_email}`}>{meal.creator}</a>
                 </p>
                 <p className={classes.summary}>
                     {meal.summary}
